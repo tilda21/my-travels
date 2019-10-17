@@ -1,12 +1,14 @@
 import React from "react";
+import Travels from "./Travels";
+import "./App.css";
 
-const Travel = props => (
-  <figure>
-    <img src={props.image} alt={props.destination} />
+const Travel = (travels) => (
+  <figure className="Travel-figure">
+    <img className="Travel-figure-img" src={travels.image} alt={travels.trip} />
     <figcaption>
-      <blockquote>{props.destination}</blockquote>
-      <cite>{props.country}</cite>
-      <cite>{props.distance}</cite>
+      <blockquote>{travels.destination}</blockquote>
+      <cite>{travels.country}</cite>
+     
     </figcaption>
   </figure>
 );
